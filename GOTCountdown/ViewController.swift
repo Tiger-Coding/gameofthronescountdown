@@ -14,6 +14,9 @@ class ViewController: NSViewController {
     
     var timer: NSTimer?
     
+    /** Used to flash the label when it's time to watch */
+    var countdownLabelHidden: Bool = false
+    
     let countdown: Countdown = Countdown()
     
     override func viewDidLoad() {
@@ -47,13 +50,16 @@ class ViewController: NSViewController {
             countdownLabel.stringValue = "\(remainingTime.days):d  \(remainingTime.hours):h  \(remainingTime.minutes):m  \(remainingTime.seconds):s"
         }
         else {
-            countdownLabel.stringValue = "Game Of Thrones!"
-        }
-    }
-    
-    override var representedObject: AnyObject? {
-        didSet {
-            // Update the view, if already loaded.
+            if countdownLabelHidden {
+                countdownLabel.hidden = false
+                countdownLabelHidden = false
+            }
+            else {
+                countdownLabel.hidden = true
+                countdownLabelHidden = true
+            }
+            
+            countdownLabel.stringValue = "Watch  It  Now"
         }
     }
 }

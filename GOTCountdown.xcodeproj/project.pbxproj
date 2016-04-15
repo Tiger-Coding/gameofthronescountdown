@@ -13,6 +13,7 @@
 		CEA7B1901CB3600D00484793 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEA7B18E1CB3600D00484793 /* Main.storyboard */; };
 		CEA7B1981CB3617800484793 /* Game of Thrones.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEA7B1971CB3617800484793 /* Game of Thrones.ttf */; };
 		CEA7B1E11CBF2E8600484793 /* Countdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA7B1E01CBF2E8600484793 /* Countdown.swift */; };
+		CEEB423C1CC07CCD0029C082 /* README.rtf in Resources */ = {isa = PBXBuildFile; fileRef = CEEB423B1CC07CCD0029C082 /* README.rtf */; };
 		D5FFA5950D676CE190EEACAB /* Pods_GOTCountdown.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5596508E99019664AA745871 /* Pods_GOTCountdown.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		CEA7B1911CB3600D00484793 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEA7B1971CB3617800484793 /* Game of Thrones.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Game of Thrones.ttf"; sourceTree = "<group>"; };
 		CEA7B1E01CBF2E8600484793 /* Countdown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Countdown.swift; sourceTree = "<group>"; };
+		CEEB423B1CC07CCD0029C082 /* README.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = README.rtf; sourceTree = "<group>"; };
 		D511C6A0DB99503CE0CBE5EB /* Pods-GOTCountdown.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GOTCountdown.release.xcconfig"; path = "Pods/Target Support Files/Pods-GOTCountdown/Pods-GOTCountdown.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,6 +82,7 @@
 		CEA7B1871CB3600D00484793 /* GOTCountdown */ = {
 			isa = PBXGroup;
 			children = (
+				CEEB423B1CC07CCD0029C082 /* README.rtf */,
 				CEA7B1881CB3600D00484793 /* AppDelegate.swift */,
 				CEA7B18A1CB3600D00484793 /* ViewController.swift */,
 				CEA7B1E01CBF2E8600484793 /* Countdown.swift */,
@@ -154,6 +157,7 @@
 			files = (
 				CEA7B18D1CB3600D00484793 /* Assets.xcassets in Resources */,
 				CEA7B1901CB3600D00484793 /* Main.storyboard in Resources */,
+				CEEB423C1CC07CCD0029C082 /* README.rtf in Resources */,
 				CEA7B1981CB3617800484793 /* Game of Thrones.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
