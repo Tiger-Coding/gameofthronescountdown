@@ -6,6 +6,8 @@ Fan-made app playing around with Swift, Cocoa, and SwiftDate.
 App is available in the app folder.
 
 **License**  
-MIT.  See LICENSE for details.
+Code is MIT.  See LICENSE for details.  
 
-All images © HBO.
+The Game of Thrones true type font has it's own separate license as indicated on the [fonts for free](http://www.fonts4free.net/game-of-thrones-font.html) website.
+
+All images © HBO, and are not MIT licensed.
