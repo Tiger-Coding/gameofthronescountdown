@@ -10,30 +10,34 @@ import Foundation
 import SwiftDate
 
 
+/** An encapsulated struct that calculates the amount of time remaining until the show starts. */
 struct Countdown {
     
-    let estRegion = Region(calendarName: nil, timeZoneName: TimeZoneName.AmericaNewYork, localeName: nil)
-    var startDateEst: DateInRegion?
+    /** Made estRegion static because startDateEst depends on this for init, and this way avoids an unecessary optional. */
+    static private let estRegion = Region(calendarName: nil, timeZoneName: TimeZoneName.AmericaNewYork, localeName: nil)
     
-    init() {
-        startDateEst = DateInRegion(era: 1, year: 2016, month: 4, day: 24, hour: 21, minute: 0, second: 0, nanosecond: 0, region: estRegion)
-    }
+    /** The exact global release time the show starts. */
+    private let startDateEst: DateInRegion = DateInRegion(era: 1, year: 2016, month: 4, day: 24, hour: 21, minute: 0, second: 0, nanosecond: 0, region: Countdown.estRegion)
+    
+    /** create calendar units here so we don't have to re-create them every call. */
+    private let calendarUnits: NSCalendarUnit = [.Day, .Minute, .Hour, .Second]
     
     func remainingTime() -> RemainingTime {
         
-        guard let startDate = startDateEst else {
-            return RemainingTime()
-        }
-        
+        // get a local region so we can compare it
         let localRegion = Region()
         let localDateInRegion = DateInRegion(absoluteTime: NSDate(), region: localRegion)
         
-        let calendarUnits: NSCalendarUnit = [.Day, .Minute, .Hour, .Second]
-        guard let difference = localDateInRegion.difference(startDate, unitFlags: calendarUnits) else {
+        // difference returns an optional, so guard it
+        guard let difference = localDateInRegion.difference(startDateEst, unitFlags: calendarUnits) else {
             return RemainingTime()
         }
         
         return RemainingTime(days: difference.day, hours: difference.hour, minutes: difference.minute, seconds: difference.second)
+    }
+    
+    func showStartDate() -> NSDate {
+        return startDateEst.absoluteTime
     }
 }
 
@@ -50,6 +54,7 @@ struct RemainingTime {
         self.seconds = seconds
     }
     
+    /** Returns true if the sum of all the properties > zero. */
     func greaterThanZero() -> Bool {
         return days + hours + minutes + seconds > 0
     }
