@@ -697,6 +697,16 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <button translatesAutoresizingMaskIntoConstraints="NO" id="U0m-MS-B9B">
+                                <rect key="frame" x="10" y="5" width="155" height="18"/>
+                                <buttonCell key="cell" type="check" title="Play theme on startup" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="d3L-Hn-4dB">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="playThemeCheckboxClicked:" target="XfG-lQ-9wD" id="gUk-Jq-udd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="Fy0-rM-Z3j" secondAttribute="bottom" id="39B-jx-A9R"/>
@@ -704,13 +714,16 @@
                             <constraint firstAttribute="trailing" secondItem="pe2-xf-hyP" secondAttribute="trailing" constant="20" id="64D-f4-72d"/>
                             <constraint firstAttribute="trailing" secondItem="Fy0-rM-Z3j" secondAttribute="trailing" id="BOq-aa-VZ8"/>
                             <constraint firstItem="pe2-xf-hyP" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="QJF-zs-M3i"/>
+                            <constraint firstAttribute="bottom" secondItem="U0m-MS-B9B" secondAttribute="bottom" constant="7" id="c7b-Vj-KpQ"/>
                             <constraint firstItem="Fy0-rM-Z3j" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="eBI-Hm-lO9"/>
+                            <constraint firstItem="U0m-MS-B9B" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="12" id="eyb-Ab-WwZ"/>
                             <constraint firstItem="Fy0-rM-Z3j" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="o2R-dR-BLs"/>
                             <constraint firstAttribute="bottom" secondItem="qGQ-Nb-Q2a" secondAttribute="bottom" constant="6" id="p6L-Gl-hAs"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="countdownLabel" destination="pe2-xf-hyP" id="2Ed-RO-1YK"/>
+                        <outlet property="playThemeCheckbox" destination="U0m-MS-B9B" id="7d4-Hk-uVg"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

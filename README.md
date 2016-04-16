@@ -10,4 +10,6 @@ Code is MIT.  See LICENSE for details.
 
 The Game of Thrones true type font has it's own separate license as indicated on the [fonts for free](http://www.fonts4free.net/game-of-thrones-font.html) website.
 
-All images © HBO, and are not MIT licensed.
+Audio file from [Wikipedia](https://en.wikipedia.org/wiki/File:Game_of_Thrones_Main_Title_sample.ogg).
+
+Game of Thrones, all images and other related files © HBO, and are *not* MIT licensed.

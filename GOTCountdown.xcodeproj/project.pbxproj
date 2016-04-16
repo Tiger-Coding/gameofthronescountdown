@@ -14,6 +14,8 @@
 		CEA7B1981CB3617800484793 /* Game of Thrones.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEA7B1971CB3617800484793 /* Game of Thrones.ttf */; };
 		CEA7B1E11CBF2E8600484793 /* Countdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA7B1E01CBF2E8600484793 /* Countdown.swift */; };
 		CEEB42441CC1CCBD0029C082 /* LocalNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEB42431CC1CCBD0029C082 /* LocalNotification.swift */; };
+		CEEB42461CC1EF3A0029C082 /* MainTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEB42451CC1EF3A0029C082 /* MainTheme.swift */; };
+		CEEB42481CC20C790029C082 /* MainSample.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CEEB42471CC20C790029C082 /* MainSample.mp3 */; };
 		D5FFA5950D676CE190EEACAB /* Pods_GOTCountdown.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5596508E99019664AA745871 /* Pods_GOTCountdown.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +31,8 @@
 		CEA7B1971CB3617800484793 /* Game of Thrones.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Game of Thrones.ttf"; sourceTree = "<group>"; };
 		CEA7B1E01CBF2E8600484793 /* Countdown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Countdown.swift; sourceTree = "<group>"; };
 		CEEB42431CC1CCBD0029C082 /* LocalNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalNotification.swift; sourceTree = "<group>"; };
+		CEEB42451CC1EF3A0029C082 /* MainTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTheme.swift; sourceTree = "<group>"; };
+		CEEB42471CC20C790029C082 /* MainSample.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = MainSample.mp3; path = ../../../../../Desktop/MainSample.mp3; sourceTree = "<group>"; };
 		D511C6A0DB99503CE0CBE5EB /* Pods-GOTCountdown.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GOTCountdown.release.xcconfig"; path = "Pods/Target Support Files/Pods-GOTCountdown/Pods-GOTCountdown.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,10 +90,12 @@
 				CEA7B18A1CB3600D00484793 /* ViewController.swift */,
 				CEA7B1E01CBF2E8600484793 /* Countdown.swift */,
 				CEEB42431CC1CCBD0029C082 /* LocalNotification.swift */,
+				CEEB42451CC1EF3A0029C082 /* MainTheme.swift */,
 				CEA7B18C1CB3600D00484793 /* Assets.xcassets */,
 				CEA7B18E1CB3600D00484793 /* Main.storyboard */,
 				CEA7B1911CB3600D00484793 /* Info.plist */,
 				CEA7B1971CB3617800484793 /* Game of Thrones.ttf */,
+				CEEB42471CC20C790029C082 /* MainSample.mp3 */,
 			);
 			path = GOTCountdown;
 			sourceTree = "<group>";
@@ -158,6 +164,7 @@
 				CEA7B18D1CB3600D00484793 /* Assets.xcassets in Resources */,
 				CEA7B1901CB3600D00484793 /* Main.storyboard in Resources */,
 				CEA7B1981CB3617800484793 /* Game of Thrones.ttf in Resources */,
+				CEEB42481CC20C790029C082 /* MainSample.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,6 +227,7 @@
 				CEA7B18B1CB3600D00484793 /* ViewController.swift in Sources */,
 				CEA7B1891CB3600D00484793 /* AppDelegate.swift in Sources */,
 				CEA7B1E11CBF2E8600484793 /* Countdown.swift in Sources */,
+				CEEB42461CC1EF3A0029C082 /* MainTheme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

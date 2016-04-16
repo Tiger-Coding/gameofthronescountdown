@@ -10,7 +10,14 @@ import Cocoa
 
 class ViewController: NSViewController {
 
+    //MARK: Outlets
+    
     @IBOutlet weak var countdownLabel: NSTextField!
+    
+    // GoT theme music!
+    @IBOutlet weak var playThemeCheckbox: NSButton!
+    
+    //MARK: Variables
     
     var timer: NSTimer?
     
@@ -20,12 +27,20 @@ class ViewController: NSViewController {
     let countdown: Countdown = Countdown()
     let localNotification = LocalNotification()
     
+    var mainTheme = MainTheme()
+    
+    //MARK: Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         countdownLabel.font = NSFont(name: "GameofThrones", size: 18.0)
         
-        // schedule notifications if they haven't been already
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.alignment = .Left
+        playThemeCheckbox.attributedTitle = NSAttributedString(string: "Play theme on startup", attributes: [ NSForegroundColorAttributeName : NSColor.whiteColor(), NSParagraphStyleAttributeName : paragraphStyle ])
+        
+        // schedule notifications (if they haven't been already they won't be scheduled again)
         localNotification.scheduleReminderNotfication(countdown.showStartDate())
     }
     
@@ -36,6 +51,8 @@ class ViewController: NSViewController {
         if timer == nil {
             timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: #selector(ViewController.updateLabel(_:)), userInfo: nil, repeats: true)
         }
+        
+        mainTheme.playTheme()
     }
     
     override func viewDidDisappear() {
@@ -45,7 +62,11 @@ class ViewController: NSViewController {
             existingTimer.invalidate()
             timer = nil
         }
+        
+        mainTheme.stopTheme()
     }
+    
+    //MARK: Countdown label
     
     func updateLabel(timer: NSTimer!) {
         
@@ -68,6 +89,23 @@ class ViewController: NSViewController {
             
             countdownLabel.stringValue = "Watch  It  Now"
         }
+    }
+    
+    //MARK: Audio
+    
+    @IBAction func playThemeCheckboxClicked(sender: AnyObject) {
+        if mainTheme.playThemeOnStartup {
+            mainTheme.playOnStartupChanged(false)
+            updateCheckbox()
+        }
+        else {
+            mainTheme.playOnStartupChanged(true)
+            updateCheckbox()
+        }
+    }
+    
+    func updateCheckbox() {
+        playThemeCheckbox.state = mainTheme.playThemeOnStartup ? NSOnState : NSOffState
     }
 }
 
