@@ -16,6 +16,9 @@
 		CEEB42441CC1CCBD0029C082 /* LocalNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEB42431CC1CCBD0029C082 /* LocalNotification.swift */; };
 		CEEB42461CC1EF3A0029C082 /* MainTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEB42451CC1EF3A0029C082 /* MainTheme.swift */; };
 		CEEB42481CC20C790029C082 /* MainSample.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CEEB42471CC20C790029C082 /* MainSample.mp3 */; };
+		CEEB424A1CC30ECB0029C082 /* RemainingTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEB42491CC30ECB0029C082 /* RemainingTime.swift */; };
+		CEEB424C1CC3108B0029C082 /* String+CountdownFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEB424B1CC3108B0029C082 /* String+CountdownFormatter.swift */; };
+		CEEB424E1CC318520029C082 /* DarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEB424D1CC318520029C082 /* DarkView.swift */; };
 		D5FFA5950D676CE190EEACAB /* Pods_GOTCountdown.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5596508E99019664AA745871 /* Pods_GOTCountdown.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +36,9 @@
 		CEEB42431CC1CCBD0029C082 /* LocalNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalNotification.swift; sourceTree = "<group>"; };
 		CEEB42451CC1EF3A0029C082 /* MainTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTheme.swift; sourceTree = "<group>"; };
 		CEEB42471CC20C790029C082 /* MainSample.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = MainSample.mp3; path = ../../../../../Desktop/MainSample.mp3; sourceTree = "<group>"; };
+		CEEB42491CC30ECB0029C082 /* RemainingTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemainingTime.swift; sourceTree = "<group>"; };
+		CEEB424B1CC3108B0029C082 /* String+CountdownFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+CountdownFormatter.swift"; sourceTree = "<group>"; };
+		CEEB424D1CC318520029C082 /* DarkView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DarkView.swift; sourceTree = "<group>"; };
 		D511C6A0DB99503CE0CBE5EB /* Pods-GOTCountdown.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GOTCountdown.release.xcconfig"; path = "Pods/Target Support Files/Pods-GOTCountdown/Pods-GOTCountdown.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -89,8 +95,11 @@
 				CEA7B1881CB3600D00484793 /* AppDelegate.swift */,
 				CEA7B18A1CB3600D00484793 /* ViewController.swift */,
 				CEA7B1E01CBF2E8600484793 /* Countdown.swift */,
+				CEEB42491CC30ECB0029C082 /* RemainingTime.swift */,
 				CEEB42431CC1CCBD0029C082 /* LocalNotification.swift */,
 				CEEB42451CC1EF3A0029C082 /* MainTheme.swift */,
+				CEEB424B1CC3108B0029C082 /* String+CountdownFormatter.swift */,
+				CEEB424D1CC318520029C082 /* DarkView.swift */,
 				CEA7B18C1CB3600D00484793 /* Assets.xcassets */,
 				CEA7B18E1CB3600D00484793 /* Main.storyboard */,
 				CEA7B1911CB3600D00484793 /* Info.plist */,
@@ -227,7 +236,10 @@
 				CEA7B18B1CB3600D00484793 /* ViewController.swift in Sources */,
 				CEA7B1891CB3600D00484793 /* AppDelegate.swift in Sources */,
 				CEA7B1E11CBF2E8600484793 /* Countdown.swift in Sources */,
+				CEEB424C1CC3108B0029C082 /* String+CountdownFormatter.swift in Sources */,
 				CEEB42461CC1EF3A0029C082 /* MainTheme.swift in Sources */,
+				CEEB424E1CC318520029C082 /* DarkView.swift in Sources */,
+				CEEB424A1CC30ECB0029C082 /* RemainingTime.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,9 +1,12 @@
-**About**  
 Fan-made app playing around with Swift, Cocoa, and SwiftDate.
 
 ![](screenshot.png)
 
 Game of Thrones will be simulcast around the world on 24 April, at 9:00 pm Eastern Standard time.  If you are in the UK, then it will be on April 25th, at 2:00 am.
+
+**Usage:**  
+
+An archived app is in the app folder.  Otherwise clone or download the repo, then install the SwiftDate CocoaPod.
 
 **License**  
 Code is MIT.  See LICENSE for details.  

@@ -14,9 +14,9 @@ import AVFoundation
 struct MainTheme {
     
     /** Loads the audio setting boolean from NSUserDefaults. */
-    private static var PlayThemeOnStartupKey = "PlayThemeOnStartupKey"
+    private static var PlayThemeOnStartupKey = "MainTheme.PlayThemeOnStartupKey"
     /** When the user first runs the app, we need to know to ensure the true value is set.  I could use a default plist here, but this is a small side project and faster. */
-    private static var PlayThemeUponInitialLoadSetKey = "PlayThemeUponInitialLoadSetKey"
+    private static var InitialLoadSetupKey = "MainTheme.InitialLoadSetupKey"
     
     /** local var so we don't have to query NSUserDefaults over and over */
     private (set) var playThemeOnStartup: Bool
@@ -24,11 +24,14 @@ struct MainTheme {
     private let themeSound = NSSound(named: "MainSample")
     
     init() {
-        // need to get the initial values on init if they have never been set before
-        if NSUserDefaults.standardUserDefaults().boolForKey(MainTheme.PlayThemeUponInitialLoadSetKey) == false {
+        // need to set the initial values on init if they have never been set before
+        if NSUserDefaults.standardUserDefaults().boolForKey(MainTheme.InitialLoadSetupKey) == false {
+            NSUserDefaults.standardUserDefaults().setBool(true, forKey: MainTheme.InitialLoadSetupKey)
+            
+            // we've confirmed this is the first time we are setting up, so now enable play theme on startup
             NSUserDefaults.standardUserDefaults().setBool(true, forKey: MainTheme.PlayThemeOnStartupKey)
             playThemeOnStartup = true
-            NSUserDefaults.standardUserDefaults().setBool(true, forKey: MainTheme.PlayThemeUponInitialLoadSetKey)
+            
             NSUserDefaults.standardUserDefaults().synchronize()
         }
         else {

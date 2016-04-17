@@ -681,6 +681,20 @@
                                 <rect key="frame" x="0.0" y="0.0" width="662" height="383"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="got" id="Z4l-jq-nvP"/>
                             </imageView>
+                            <customView alphaValue="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="k82-y7-ja2" userLabel="Checkbox background dark view" customClass="DarkView" customModule="GOTCountdown" customModuleProvider="target">
+                                <rect key="frame" x="8" y="3" width="143" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="ZrO-BY-W5G"/>
+                                    <constraint firstAttribute="width" constant="143" id="ctO-R1-8We"/>
+                                </constraints>
+                            </customView>
+                            <customView alphaValue="0.29999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="vtB-1h-fP9" userLabel="Photo HBO background dark view" customClass="DarkView" customModule="GOTCountdown" customModuleProvider="target">
+                                <rect key="frame" x="573" y="3" width="83" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="83" id="Fe9-xF-oGW"/>
+                                    <constraint firstAttribute="height" constant="22" id="stj-K1-eCN"/>
+                                </constraints>
+                            </customView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="pe2-xf-hyP">
                                 <rect key="frame" x="552" y="346" width="92" height="17"/>
                                 <textFieldCell key="cell" refusesFirstResponder="YES" allowsUndo="NO" sendsActionOnEndEditing="YES" alignment="right" title="COUNTDOWN" id="fdP-i8-8YU">
@@ -714,11 +728,15 @@
                             <constraint firstAttribute="trailing" secondItem="pe2-xf-hyP" secondAttribute="trailing" constant="20" id="64D-f4-72d"/>
                             <constraint firstAttribute="trailing" secondItem="Fy0-rM-Z3j" secondAttribute="trailing" id="BOq-aa-VZ8"/>
                             <constraint firstItem="pe2-xf-hyP" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="QJF-zs-M3i"/>
+                            <constraint firstAttribute="trailing" secondItem="vtB-1h-fP9" secondAttribute="trailing" constant="6" id="WSj-VD-1p3"/>
+                            <constraint firstAttribute="bottom" secondItem="k82-y7-ja2" secondAttribute="bottom" constant="3" id="XOm-hw-RZ1"/>
                             <constraint firstAttribute="bottom" secondItem="U0m-MS-B9B" secondAttribute="bottom" constant="7" id="c7b-Vj-KpQ"/>
                             <constraint firstItem="Fy0-rM-Z3j" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="eBI-Hm-lO9"/>
                             <constraint firstItem="U0m-MS-B9B" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="12" id="eyb-Ab-WwZ"/>
+                            <constraint firstAttribute="bottom" secondItem="vtB-1h-fP9" secondAttribute="bottom" constant="3" id="fXM-7r-JTa"/>
                             <constraint firstItem="Fy0-rM-Z3j" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="o2R-dR-BLs"/>
                             <constraint firstAttribute="bottom" secondItem="qGQ-Nb-Q2a" secondAttribute="bottom" constant="6" id="p6L-Gl-hAs"/>
+                            <constraint firstItem="k82-y7-ja2" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="8" id="x1W-HT-Ar5"/>
                         </constraints>
                     </view>
                     <connections>

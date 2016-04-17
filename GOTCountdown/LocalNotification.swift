@@ -17,7 +17,7 @@ struct LocalNotification {
     private static var hasBeenScheduled: Bool = false
     
     /** Used to verify if notifcations have been set by storing in NSUserDefaults. */
-    private static var HasBeenScheduledKey = "hasBeenScheduledKey"
+    private static var HasBeenScheduledKey = "LocalNotification.HasBeenScheduledKey"
     
     init() {
         loadLocalNotificationScheduled()
@@ -85,6 +85,7 @@ struct LocalNotification {
         notification.informativeText = message
         // I'm cheating here with a private API for the left icon :)
         // searches on this show lots of workarounds and I don't feel like spending more time on it
+        // sadly, I'm still seeing a smaller icon next to the title though
         notification.setValue(NSApp.applicationIconImage, forKey: "_identityImage")
         notification.deliveryDate = date
         notification.soundName = NSUserNotificationDefaultSoundName

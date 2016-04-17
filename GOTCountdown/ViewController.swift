@@ -36,6 +36,7 @@ class ViewController: NSViewController {
         
         countdownLabel.font = NSFont(name: "GameofThrones", size: 18.0)
         
+        // change the font color for the checkbox
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.alignment = .Left
         playThemeCheckbox.attributedTitle = NSAttributedString(string: "Play theme on startup", attributes: [ NSForegroundColorAttributeName : NSColor.whiteColor(), NSParagraphStyleAttributeName : paragraphStyle ])
@@ -43,6 +44,8 @@ class ViewController: NSViewController {
         // schedule notifications (if they haven't been already they won't be scheduled again)
         localNotification.scheduleReminderNotfication(countdown.showStartDate())
     }
+    
+    //MARK: Appearance
     
     override func viewDidAppear() {
         super.viewDidAppear()
@@ -66,32 +69,19 @@ class ViewController: NSViewController {
         mainTheme.stopTheme()
     }
     
-    //MARK: Countdown label
+    //MARK: Countdown!
     
     func updateLabel(timer: NSTimer!) {
         
         let remainingTime = countdown.remainingTime()
+        countdownLabel.stringValue = String.formattedCountdownString(remainingTime)
         
-        if remainingTime.greaterThanZero() {
-            countdownLabel.stringValue = "\(remainingTime.days):d  \(remainingTime.hours):h  \(remainingTime.minutes):m  \(remainingTime.seconds):s"
-        }
-        else {
-            // its time, so flash to the user to watch the show
-            
-            if countdownLabelHidden {
-                countdownLabel.hidden = false
-                countdownLabelHidden = false
-            }
-            else {
-                countdownLabel.hidden = true
-                countdownLabelHidden = true
-            }
-            
-            countdownLabel.stringValue = "Watch  It  Now"
+        if remainingTime.greaterThanZero() == false {
+            flashCountdownLabel()
         }
     }
     
-    //MARK: Audio
+    //MARK: Actions
     
     @IBAction func playThemeCheckboxClicked(sender: AnyObject) {
         if mainTheme.playThemeOnStartup {
@@ -104,8 +94,21 @@ class ViewController: NSViewController {
         }
     }
     
+    //MARK: UI
+    
     func updateCheckbox() {
         playThemeCheckbox.state = mainTheme.playThemeOnStartup ? NSOnState : NSOffState
+    }
+    
+    func flashCountdownLabel() {
+        if countdownLabelHidden {
+            countdownLabel.hidden = false
+            countdownLabelHidden = false
+        }
+        else {
+            countdownLabel.hidden = true
+            countdownLabelHidden = true
+        }
     }
 }
 
