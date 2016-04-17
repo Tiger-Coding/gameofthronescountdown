@@ -43,6 +43,8 @@ class ViewController: NSViewController {
         
         // schedule notifications (if they haven't been already they won't be scheduled again)
         localNotification.scheduleReminderNotfication(countdown.showStartDate())
+        
+        updateCheckbox()
     }
     
     //MARK: Appearance
